@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class EmpQuestions {
 
@@ -116,6 +117,17 @@ Collectors.groupingBy(x->x.getDistrict(),Collectors.counting()
 		
 salaryCount.forEach((designation, salary) 
 		-> System.out.println(designation + "------->   "   + salary));
+
+//Increase salary 10% of java Developer
+List<Emp> java = emp.stream().filter(x -> x.getDesignation().equalsIgnoreCase("Java Developer"))
+.map(e->
+{
+	int currentSalary = e.getSalary();
+	double incresedSalary = currentSalary*1.10;
+	e.setSalary((int) incresedSalary);
+	return e;
+}).collect(Collectors.toList());
+System.out.println("Java Devepoer-->" + java);
 
 	}
 }
