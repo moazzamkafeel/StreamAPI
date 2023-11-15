@@ -89,7 +89,7 @@ public class EmpQuestions {
 		System.out.println(comaNames);
 
 //Q-10  Given the list of numbers, remove the duplicate 
-
+// distnct
 //Q-11 Find 3rd Highest salary emp na emp.stream().max(Comparator.comparingInt(x->x.getSalary())).sk
 
 // Practice

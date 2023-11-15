@@ -1,7 +1,5 @@
 package EmployeeClass;
 
-import java.util.List;
-
 public class Questions {
 	
 //Q1 Given a list of employees, you need to filter all the employee

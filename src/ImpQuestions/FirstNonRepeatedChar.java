@@ -10,11 +10,11 @@ public class FirstNonRepeatedChar {
 		
 
 //  //    Q7 Given a String, find the first repeated character 
-//		//    in it using Stream functions?
+//    in it using Stream functions?
 //      
       String str = "Java Hungry Blog Alive is Awesome";
 
-      Character result = str.chars() // Stream of String       
+     Character result = str.chars() // Stream of String       
               .mapToObj(s -> Character.toLowerCase(Character.valueOf((char) s))) // Convert to lowercase Character
               .collect(Collectors.groupingBy(
                   Function.identity(),  // Identity function (character itself)
@@ -23,11 +23,11 @@ public class FirstNonRepeatedChar {
               ))
               .entrySet()
               .stream()
-              .filter(entry -> entry.getValue() > 1L) // Filter repeated characters
+              .filter(entry -> entry.getValue() > 1L)// Filter repeated characters
               .map(Map.Entry::getKey)                 // Get the repeated character
               .findFirst()                            // Find the first one
               .get();                                 // Get the result
-
           System.out.println(result);
+          
 }
 }

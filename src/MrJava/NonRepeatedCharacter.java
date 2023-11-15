@@ -13,10 +13,15 @@ public class NonRepeatedCharacter {
 
 	 Map<Character, Long> map = str.chars().mapToObj(x->(char)x)
 	.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
-	map.forEach((k,v)->{
+     map.forEach((k,v)->System.out.println(k+"-----"+v));
+	 map.forEach((k,v)->{
 		if(v==1){
          	System.out.println(k+"--"+v);
 		}
 });
+	
+	
+	
+	
 	}
 }

@@ -3,10 +3,12 @@ package practice;
 public class Practice {
 private static long vowels=0;
 private static long consonant=0;
+
 	public static void main(String[] args) {
 		
 		String s="AbcdEfghijklmnopqrstuwvxyz";
 		s=s.toLowerCase();
+		
 	for(int i=0;i<s.length();i++)
 	{
 		char ch = s.charAt(i);
