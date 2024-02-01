@@ -8,7 +8,7 @@ public class TerneryOperator {
 	
 	// condition ? expression_if_true : expression_if_false
 
-		System.out.println(num);
+		System.out.println();
 		
 		
 		
