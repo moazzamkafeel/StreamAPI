@@ -6,7 +6,8 @@ public class TerneryOperator {
 		
 		int a=79,b=20,c=56;
 		gi
-	//	int num = (a>b)?(b>c?b:c):(c>b?c:b);    //wrong logic
+	// condition ? expression_if_true : expression_if_false
+
 		System.out.println(num);
 		
 		
