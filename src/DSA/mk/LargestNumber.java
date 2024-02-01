@@ -20,13 +20,15 @@ public class LargestNumber {
 		}
 		
 		//2nd by ternery operator
-		
+//	condition ? expression_if_true : expression_if_false
+	
 		int largest = (a>b)?(b>a?a:b):(c>b?c:b);
 		System.out.println(largest+" is largest number");
 		
 		//ternery Operator by 2 digit
 		int d=444,f=76;
 		int er = d>f?d:f;
+		
 		System.out.println(er);
 		
 		
