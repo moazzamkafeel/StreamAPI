@@ -19,4 +19,5 @@ public class ArrayListClass {
 		System.out.println("syso "+list);
 		
 	}
+	
 	}
