@@ -1,6 +1,7 @@
 package EmployeeClass;
 
 public class Emp {
+	
 	private int empId;
 	private int salary;
 	private String name;

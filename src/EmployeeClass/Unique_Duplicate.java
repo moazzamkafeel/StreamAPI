@@ -15,7 +15,8 @@ public class Unique_Duplicate {
 //	oc.entrySet().stream().forEach(x->System.out.println(x.getKey()+"--"+x.getValue()));
 		String str = "Moazzam";
 		Map<Character, Long> map = str.chars().mapToObj(c -> (char) c)
-				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+				.collect(Collectors
+						.groupingBy(Function.identity(), Collectors.counting()));
 		map.entrySet().stream().forEach(x -> System.out.println(x.getKey() + "  -- " + x.getValue()));
 
 	}

@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 public class Sort_Value {
 public static void main(String[] args) {
+	
 	Map<String, Integer> hm = Map.of("A",07,"Z",05,"F",02);
 	System.out.println(hm+"Unsorted");
 	
@@ -19,7 +20,6 @@ public static void main(String[] args) {
 	System.out.println(sortedMap+"--->sortedMap");
 	
 	// List
-	
 	 List<Entry<String, Integer>> sortedMap1 = hm.entrySet().stream()
 			.sorted(Map.Entry.comparingByValue())
 	.collect(Collectors.toList());

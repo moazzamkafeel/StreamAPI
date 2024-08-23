@@ -9,10 +9,9 @@ public class ConcurruntHashMap_HashMap {
 
 //      HashMap:
 //	1	Not thread-safe
-//	2	Better performance in single-threaded environments.
-//	3	Iterators are fail-fast.
-//	4	Null values Allow
-//	5	Suitable for single-threaded or externally synchronized situations.
+//	2	Iterators are fail-fast.
+//	3	Null values Allow
+
 		Map<Integer, String> hm = new HashMap<>();
 		hm.put(9, "Moazzam");
 		hm.put(4, "Kafeel");

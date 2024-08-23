@@ -10,8 +10,33 @@ public class Second_Third_Fourth_Highest {
 
 		List<Integer> list = List.of(45, 78, 98, 34, 21, 999);
 
+	list.stream()
+	.sorted(Collections.reverseOrder())
+	.skip(1)
+	.limit(4)
+	.forEach(x->System.out.println(x));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 // Second
-list.stream().sorted(Collections.reverseOrder()).skip(1).limit(1).forEach(z -> System.out.println(z));
+//list.stream()
+//       .sorted(Collections
+//       .reverseOrder())
+//       .skip(1)
+//       .limit(1)
+//       .forEach(z -> System.out.println(z));
+
+//1.Stream
+
 
 //       list.stream()
 //       .sorted(Collections.reverseOrder())
