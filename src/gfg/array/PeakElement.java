@@ -4,17 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PeakElement {
+
+	// greater than or equal to its neighbors.
+	//Steps
+	
+	// 
+	
+	
+	
 	
 	public static List<Integer> findAllPeakElements(int[] nums) {
 		List<Integer> peaks = new ArrayList<>();
 
 		for (int i = 0; i < nums.length; i++) {
 			// Check if the current element is a peak
-			if ((i == 0 
-					|| nums[i] >= nums[i - 1]) 
-					&& (i == nums.length - 1 || 
-					nums[i] >= nums[i + 1])) {
-			
+			if ((i == 0 || nums[i] >= nums[i - 1]) 
+	&& (i == nums.length - 1 || nums[i] >= nums[i + 1])) {
+
 				peaks.add(nums[i]);
 			}
 		}
