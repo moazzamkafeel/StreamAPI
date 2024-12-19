@@ -11,13 +11,17 @@ public class UniqueCharacter {
 	public static void main(String[] args) {
 
 		// String has a unique character
+		
 		String s = "Moazzam";
 		Stream<String> ss = Stream.of(s);
 		List.of();
-		List<String> list = ss.map(x -> x.split(""))// Split string into array of stream
+		
+		List<String> list = ss
+				.map(x -> x.split(""))// Split string into array of stream
 				.flatMap(Arrays::stream)// Flatten from array to stream
-				.distinct().collect(Collectors.toList());
-		System.out.println(list);
+				.distinct()
+				.collect(Collectors.toList());
+	  	         System.out.println(list);
 		// System.out.println("print all unique character"+getUniqueCharacter(s));
 		boolean result = false;
 

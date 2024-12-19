@@ -1,8 +1,9 @@
 package array;
 
 public class FirstMissingPositive {
-	
+
     public static int firstMissingPositive(int[] nums) {
+    	
         int n = nums.length;
 
         for (int i = 0; i < n; i++) {
@@ -18,12 +19,15 @@ public class FirstMissingPositive {
                 return i + 1;
             }
         }
-
         return n + 1;
     }
 
     public static void main(String[] args) {
+    	
         int[] array = {3, 4, -1, 1};
+        
         System.out.println("First Missing Positive: " + firstMissingPositive(array));
+        
     }
+    
 }

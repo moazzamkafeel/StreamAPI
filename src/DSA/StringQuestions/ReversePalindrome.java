@@ -8,9 +8,10 @@ public class ReversePalindrome {
 		String rev = "";
 
 		for (int i = 0; i < str.length(); i++) {
-			rev = str.charAt(i) + rev;
+			rev = str.charAt(i)+rev;
 		}
-		System.out.println(rev);
+		
+		System.out.println(rev+"--->Reverse ");
 		if (str.equals(rev)) {
 			System.out.println("String is palindrome--> " + rev);
 

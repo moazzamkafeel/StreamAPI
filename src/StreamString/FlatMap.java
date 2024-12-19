@@ -18,7 +18,7 @@ public class FlatMap {
 
 		List<List<String>> ListOfList = stringList.stream().map(str -> Arrays.asList(str.split(".")))
 				.collect(Collectors.toList());
-		System.out.println(ListOfList);
+		ListOfList.forEach(print -> System.out.println(print));
 
 //		List<String> flatMap = stringList.stream().flatMap(str -> Arrays.asList(str.split(",")))
 //				.collect(Collectors.toList());

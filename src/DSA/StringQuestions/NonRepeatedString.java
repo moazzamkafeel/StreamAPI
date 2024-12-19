@@ -6,6 +6,7 @@ import java.util.Map;
 public class NonRepeatedString {
 
 	public static void main(String[] args) {
+		
 		// Method 1 toCharArray
 		String s = "moazzam";
 
@@ -15,8 +16,9 @@ public class NonRepeatedString {
 				break;
 			}
 		}
+		
+		
 		// java 8 method
-
 		System.out.println("By Java 8---->  " + firstNonRepeatable(s));
 
 	}

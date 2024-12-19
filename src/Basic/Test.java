@@ -6,15 +6,12 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
-import java.util.OptionalDouble;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import HardQuestions.Emp;
 
 public class Test {
+	
 	public static void main(String[] args) {
 
 		List<Integer> list = List.of(56, 77, 55, 44, 44);
@@ -23,7 +20,7 @@ public class Test {
 
 				.forEach(x -> System.out.println("Odd--->" + x));
 		list.stream().filter(x -> x % 2 == 0).forEach(x -> System.out.println("Even--->" + x));
-
+ 
 		double sum1 = list.stream().mapToDouble(x -> x).sum();
 		System.out.println(sum1);
 		Integer sum4 = list.stream().reduce(Integer::sum).get();
@@ -33,7 +30,7 @@ public class Test {
 		long sum3 = list.stream().mapToInt(x -> x).summaryStatistics().getSum();
 		System.out.println(sum3);
 
-		// Max
+		// Max                                                                                   
 		double max1 = list.stream().mapToDouble(x -> x).max().getAsDouble();
 		System.out.println(max1);
 		Integer max2 = list.stream().max(Comparator.naturalOrder()).get();
@@ -76,7 +73,7 @@ public class Test {
 		for (char c : text.toCharArray()) {
 			if (map.containsKey(c)) {
 				map.put(c, map.get(c) + 1);
-			} else {
+			} else {km              m
 				map.put(c, 1);
 			}
 		}
@@ -91,12 +88,16 @@ public class Test {
 			}
 		});
 
-//Reverse String
+        //Reverse String
+		
 		String str = "moazzam";
 
 		String str2 = "";
+		
 		for (int i = str.length() - 1; i >= 0; i--) {
+			
 			str2 += str.charAt(i);
+			
 		}
 		System.out.println(str2);
 

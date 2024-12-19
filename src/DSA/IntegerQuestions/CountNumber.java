@@ -1,6 +1,7 @@
 package DSA.IntegerQuestions;
 
 public class CountNumber {
+	
 	public static void main(String[] args) {
 
 		int a = 46789;
@@ -10,6 +11,7 @@ public class CountNumber {
 			a = a / 10;
 			count++;
 		}
+		
 		System.out.println(count);
 
 	}

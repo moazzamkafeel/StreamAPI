@@ -11,7 +11,9 @@ public class Square_Odd_Even {
 //list.stream().map(x->x*x).forEach(x->System.out.println(x));
 
 //Even 
-		list.stream().filter(x->x%2!=0)
+		
+		list.stream()
+		.filter(x->x%2!=0)
 		.forEach(System.out::println);
 		
 //     list.stream().filter(x->x%2!=0)

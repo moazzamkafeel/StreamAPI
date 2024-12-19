@@ -1,6 +1,7 @@
 package array;
 
 public class MissingNumber {
+	
     public static int missingNumber(int[] nums) {
         int n = nums.length;
         int totalSum = n * (n + 1) / 2;
@@ -18,4 +19,3 @@ public class MissingNumber {
         System.out.println("Missing Number: " + missingNumber(array));
     }
 }
-

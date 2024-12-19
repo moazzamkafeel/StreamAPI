@@ -9,6 +9,7 @@ public class MaximumValue {
 		int max = arr[0];
 
 		// Linear Time Complixity O(n)
+		
 		for (int i = 1; i < arr.length; i++) {
 
 			if (arr[i] > max) {

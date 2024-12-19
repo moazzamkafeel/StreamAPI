@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ArrayList_LinkedList {
-	
+	                                    
 	public static void main(String[] args) {
 
 //1. Access Time:

@@ -1,19 +1,17 @@
 package EmployeeClass;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-public class EmpQuestions {
+public class EmpQuestions {	
 
 	public static void main(String[] args) {
 
-		List<Emp> emp = new CopyOnWriteArrayList<>();
-
+		List<Emp> emp = new ArrayList<>();
+		
 		emp.add(new Emp(16, 1000, "Ramesh", 20, "Java Developer", "India", "Delhi", "South Delhi"));
 		emp.add(new Emp(17, 1000, "Moazzam", 20, "Java Developer", "India", "Delhi", "North Delhi"));
 		emp.add(new Emp(18, 2000, "Naresh", 20, "Java Developer", "Dubai", "Riyad", "North Riyad"));
@@ -37,65 +35,99 @@ public class EmpQuestions {
 
 //	Q-1 Given a list of employees, you need to filter all the employee
 //				whose age is greaterthan 20 and print the employee 
-		List<String> listOfEmp = emp.stream().filter(age -> age.getAge() > 20).map(names -> names.getName())
+		
+		List<String> listOfEmp = emp
+				.stream()
+				.filter(age -> age.getAge() > 20)
+				.map(names -> names.getName())
 				.collect(Collectors.toList());
-		listOfEmp.forEach(print -> System.out.println("Age greater than 20 " + print));
-		emp.stream().filter(x -> x.getAge() > 20).forEach(x -> System.out.println(x));
+		
+		listOfEmp
+		.forEach(print -> System.out.println("Age greater than 20 " + print));
+		emp.stream().filter(x -> x.getAge() > 20)
+		.forEach(x -> System.out.println(x));
 
 // Q-2 Given the list of employees, count number of employees with age 25 ?
 
-		long countemp = emp.stream().filter(x -> x.getAge() == 25).count();
+		long countemp =
+				emp.stream()
+				.filter(x -> x.getAge() == 25)
+				.count();
 		System.out.println(countemp + "Count of Emp with age of 25");
 
-//Q-3	Given the list of employees, find the employee with name “Moazzam" ?
+//Q-3 Given the list of employees, find the employee with name “Moazzam" ?
 
-		Emp moazzam = emp.stream().filter(x -> x.getName().equalsIgnoreCase("Moazzam")).findAny().get();
+		Emp moazzam = 
+				emp.stream()
+				.filter(x -> x.getName()
+				.equalsIgnoreCase("Moazzam"))
+				.findAny().get();
+		
 		System.out.println("Find specific name list" + moazzam);
 
 // Q-4 Given a list of employee, find maximum age of employee?
-
-		Emp max = emp.stream().max(Comparator.comparingInt(x -> x.getAge())).get();
+                                                      
+		Emp max = emp
+				.stream()                                                                                                        
+				.max(Comparator.comparingInt(x -> x.getAge()))
+				.get();
 		System.out.println("maxAge ->" + max);
 
 // Q-5 Given a list of employees,sort all the employee on the basis of age
 
-		List<Emp> sorted = emp.parallelStream().sorted(Comparator.comparingInt(Emp::getAge))
+		List<Emp> sorted = emp.parallelStream()
+				.sorted(Comparator
+						.comparingInt(Emp::getAge))
 				.collect(Collectors.toList());
 		System.out.println("Sorted List by AGE" + sorted);
 
 //Q-6 Group by Designation ?
 
-		emp.stream().collect(Collectors.groupingBy(Emp::getDesignation))
-				.forEach((x, y) -> System.out.println(x + "->" + y));
+		emp.stream()
+		.collect(Collectors.groupingBy(Emp::getDesignation))
+		.forEach((x, y) -> System.out.println(x + "->" + y));
 
 //Q-7 Starts with "R" ?
 
-		List<Emp> startsWith = emp.stream().filter(x -> x.getName().startsWith("R")).collect(Collectors.toList());
+		List<Emp> startsWith = 
+				emp.stream()
+				.filter(x -> x.getName().startsWith("R")).
+				collect(Collectors.toList());
 		System.out.println(startsWith);
 
 //Q-8 Convert List into MAP
 
-		Map<String, String> toMap = emp.stream().collect(Collectors.toMap(Emp::getName, Emp::getDesignation));
+		Map<String, String> toMap = emp.stream()
+				.collect(Collectors.toMap(Emp::getName, Emp::getDesignation));
 		toMap.forEach((a, b) -> System.out.println(a + "" + b));
 
 //Q-9  Join the all employee names with “,” using java 8?
 
-		String comaNames = emp.parallelStream().map(name -> name.getName()).collect(Collectors.joining(","));
+		String comaNames = emp
+				.parallelStream()
+				.map(name -> name.getName())
+				.collect(Collectors.joining(","));
 		System.out.println(comaNames);
 
 //Q-10  Given the list of numbers, remove the duplicate 
+		
 // distnct
+		
 //Q-11 Find 3rd Highest salary emp na emp.stream().max(Comparator.comparingInt(x->x.getSalary())).sk
-		Emp secondHighestSalaryEmployee = emp.stream()
+		Emp secondHighestSalaryEmployee = 
+				emp
+				.stream()
 				.sorted((e1, e2) -> Double.compare(e2.getSalary(), e1.getSalary())) // sort in descending order
 				.skip(1) // skip the highest salary
 				.findFirst().orElse(null);
 		System.out.println(secondHighestSalaryEmployee + "-->secondHighestSalaryEmployee");
+
 // Practice
 
-// give me the data by country state district and count the records of voter in district
+// given the data by country state district and count the records of voter in district
 		System.out.println(
 				"__________________________________PRACTICE____________________________________________________________");
+		
 		Map<Object, Map<Object, Map<Object, Map<Object, Map<Object, Long>>>>> voterCount = emp.parallelStream()
 				.collect(Collectors.groupingBy(x -> x.getCountry(),
 						Collectors.groupingBy(x -> x.getState(),
@@ -105,14 +137,25 @@ public class EmpQuestions {
 		voterCount.forEach((designation, salary) -> System.out.println(designation + "------->   " + salary));
 
 		System.out.println("________________________________________________________________________________");
-		Map<Object, Map<Object, Map<Object, Long>>> salaryCount = emp.stream()
+		Map<Object, Map<Object, Map<Object, Long>>> salaryCount = 
+				emp.stream()
 				.collect(Collectors.groupingBy(e -> e.getAge(), Collectors.groupingBy(x -> x.getSalary(),
 						Collectors.groupingBy(x -> x.getDesignation(), Collectors.counting()))));
 
-		salaryCount.forEach((designation, salary) -> System.out.println(designation + "------->   " + salary));
+		salaryCount.forEach((designation, salary) -> 
+		{
+			
+		System.out.println(designation + "------->   " + salary);
+		
+		}
+				);
 
-//Increase salary 10% of java Developer
-		List<Emp> java = emp.stream().filter(x -> x.getDesignation().equalsIgnoreCase("Java Developer")).map(e -> {
+ // Increase salary 10% of java Developer
+		
+		List<Emp> java = emp
+			.stream() 
+			.filter(x -> x.getDesignation().equalsIgnoreCase("Java Developer"))
+			.map(e -> {
 			int currentSalary = e.getSalary();
 			double incresedSalary = currentSalary * 1.10;
 			e.setSalary((int) incresedSalary);

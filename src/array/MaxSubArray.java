@@ -1,6 +1,7 @@
 package array;
 
 public class MaxSubArray {
+	
     public static int maxSubArray(int[] nums) {
         int maxSoFar = nums[0];
         int maxEndingHere = nums[0];

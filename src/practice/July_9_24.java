@@ -18,7 +18,7 @@ public class July_9_24 {
 		// second highest
 		list.stream().sorted(Collections.reverseOrder()).skip(1).limit(1)
 				.forEach(x -> System.out.println("Second Highest---> " + x));
-
+ 
 		// Print duplicate
 		list.parallelStream().filter(x -> Collections.frequency(list, x) > 1)
 				.forEach(x -> System.out.println("Duplicate ALL : " + x));
@@ -51,15 +51,17 @@ public class July_9_24 {
 		for (int i = 0; i < strr.length(); i++) {
 			rev = strr.charAt(i) + rev;
 		}
+		
 		if (strr.equals(rev))
-			System.out.println("Plindrom--->"+rev);
+			System.out.println("Palindrom--->"+rev);
 		else {
 			System.out.println("Not a palindrom");
 		}
 		
-		//Print Unique charcter
+		//Print Unique character
 		HashSet<Character> character = new HashSet<Character>();
 		boolean result=true;
+		
 		for(int i=0;i<strr.length();i++) {
 			result=character.add(strr.charAt(i));
 			if(result==false)

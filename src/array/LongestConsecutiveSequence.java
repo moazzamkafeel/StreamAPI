@@ -6,7 +6,9 @@ import java.util.Set;
 public class LongestConsecutiveSequence {
 	
     public static int longestConsecutive(int[] nums) {
+    	
         Set<Integer> numSet = new HashSet<>();
+        
         for (int num : nums) {
             numSet.add(num);
         }
@@ -24,6 +26,7 @@ public class LongestConsecutiveSequence {
                 }
 
                 longestStreak = Math.max(longestStreak, currentStreak);
+          
             }
         }
 

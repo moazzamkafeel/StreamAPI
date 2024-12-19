@@ -2,8 +2,9 @@ package sorting;
 
 public class BubbleSort {
 
-    // Method to perform Bubble Sort
+    // Method to perform Bubble Sort O(n^2)
     public static void bubbleSort(int[] arr) {
+    	
         int n = arr.length;
         boolean swapped;
 

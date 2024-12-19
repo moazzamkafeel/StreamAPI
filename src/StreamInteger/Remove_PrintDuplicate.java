@@ -16,6 +16,7 @@ public class Remove_PrintDuplicate {
 
         //Print Duplicate
 		Set<Integer> s = new HashSet<>();
+		
 		list.stream().filter(x -> !s.add(x)).forEach(x -> System.out.println(x));
 
 		list.stream().distinct().forEach(x -> System.out.print(x));

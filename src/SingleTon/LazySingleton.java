@@ -4,9 +4,8 @@ package SingleTon;
 public class LazySingleton {
 
 	private LazySingleton() {
-
 	}
-
+	
 	private static LazySingleton lazySingleton;
 
 	public static LazySingleton getInstence() {
@@ -16,5 +15,4 @@ public class LazySingleton {
 
 		return lazySingleton;
 	}
-
 }
