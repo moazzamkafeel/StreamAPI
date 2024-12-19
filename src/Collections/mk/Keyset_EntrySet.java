@@ -22,16 +22,16 @@ public class Keyset_EntrySet {
 		System.out.println(hashMap);
 
 		Set<Integer> key2 = hashMap.keySet();
-		for(Integer key:key2) {
-	String value = hashMap.get(key);
-	System.out.println(value);
+
+		for (Integer key : key2) {
+			String value = hashMap.get(key);
+			System.out.println(value);
 		}
-		
-Set<Entry<Integer, String>> entrySet = hashMap.entrySet();
-for(Entry<Integer, String> entry:entrySet)
-{
-	System.out.println(entry.getValue()+""+entry.getKey());
-}
+
+		Set<Entry<Integer, String>> entrySet = hashMap.entrySet();
+		for (Entry<Integer, String> entry : entrySet) {
+			System.out.println(entry.getValue() + "" + entry.getKey());
+		}
 // By KeySET Foreach
 
 		Set<Integer> keyset = hashMap.keySet();
@@ -55,7 +55,8 @@ for(Entry<Integer, String> entry:entrySet)
 		for (Entry<Integer, String> entry : entrySet2) {
 			System.out.println(entry.getKey() + "EntrySet-->" + entry.getValue());
 		}
-		hashMap.forEach((key,value)->System.out.println(key+value));
+
+		hashMap.forEach((key, value) -> System.out.println(key + value));
 
 //		Iterator<Entry<Integer, String>> o = hashMap.entrySet().iterator();
 //

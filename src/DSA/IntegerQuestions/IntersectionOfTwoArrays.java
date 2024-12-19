@@ -3,23 +3,26 @@ package DSA.IntegerQuestions;
 import java.util.Arrays;
 
 public class IntersectionOfTwoArrays {
-	
+
+//	The intersection of two sets or collections is the set of 
+//	elements that are common to both.	
 	public static void main(String[] args) {
 		
 		int[] in = intersection(a,b);
 		//System.out.println(Arrays.toString(in));
-		
-		String[] inter = intersectStream(arr1,arr2);
-		System.out.println(Arrays.toString(inter));
+		System.out.println(Arrays.toString(in));
+//		String[] inter = intersectStream(arr1,arr2);
+//		System.out.println(Arrays.toString(inter));
 	}
-	static int a[]= {6,4,2,7,6};
+	static int[] a= {6,4,2,7,6};
 	static int b[]= {5,66,2,7,9};
 	
 	
 	public static int[] intersection(int[] a, int[] b) {
 	    return Arrays.stream(a)
 	                 .distinct()
-	                 .filter(x -> Arrays.stream(b).anyMatch(y -> y == x))
+	                 .filter(x -> 
+	                 Arrays.stream(b).anyMatch(y -> y == x))
 	                 .toArray();
 	}
 	

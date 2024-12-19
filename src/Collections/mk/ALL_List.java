@@ -1,7 +1,7 @@
 package Collections.mk;
 
 public class ALL_List {
-	public static void main(String[] args) {}}
+}
 //ArrayList: A dynamic array that grows and shrinks as needed. It's suitable for random access and fast iteration but can be slower for frequent insertions or deletions.
 // 
 //LinkedList: A doubly-linked list where elements are connected with pointers. It's efficient for insertions and deletions but less efficient for random access.

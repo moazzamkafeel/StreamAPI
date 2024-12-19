@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ArrayList_LinkedList {
+	                                    
 	public static void main(String[] args) {
 
 //1. Access Time:
@@ -22,7 +23,7 @@ public class ArrayList_LinkedList {
 
 		long startTime = System.nanoTime();
 
-		// Access elements by index
+		// Access elements by index faster
 		int element = arrayList.get(500000);
 
 		long endTime = System.nanoTime();

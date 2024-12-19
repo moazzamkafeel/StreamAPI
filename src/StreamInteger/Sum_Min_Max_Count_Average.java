@@ -13,31 +13,49 @@ public class Sum_Min_Max_Count_Average {
 
 // SUM
 		
-		Integer SUM = list.stream().reduce(Integer::sum).get();
-		System.out.println(SUM + "-->Sum by Reduce");
-
-		long summuryStatistics = list.stream().mapToInt(x -> x).summaryStatistics().getSum();
-		System.out.println("summuryStatistics SUM-->" + summuryStatistics);
-
+		//1st
+		double sum1 = list.stream().mapToDouble(x->x).sum();
+		System.out.println(sum1);
+		//2nd
+		Integer sum4 = list.stream().reduce(Integer::sum).get();
+		System.out.println(sum4 );
+		//3rd
+		double sum2 = list.stream().mapToDouble(Integer::intValue).sum();
+	    System.out.println(sum2);
+	    //4th
+	    long sum3 = list.stream().mapToInt(x->x).summaryStatistics().getSum();
+	    System.out.println(sum3);
+	    
 // MIN
-
+	    
+//1st
+	    
 		Integer minimum = list.stream().min(Comparator.naturalOrder()).get();
 		System.out.println(minimum + "-->Min");
-
+		
+//2nd
+		
 		int min = list.stream().mapToInt(Integer::intValue).min().getAsInt();
+		
+//3rd	
+		
 		int minsummaryStatistics = list.stream().mapToInt(x -> x).summaryStatistics().getMin();
 		System.out.println("minsummaryStatistics-->" + minsummaryStatistics);
 
+		
 //MAX   
 
-		int max = list.stream().mapToInt(Integer::intValue).max().getAsInt();
-		System.out.println("Max by MapToInt:---> " + max);
-
-		Integer maxComparator = list.stream().max(Comparator.naturalOrder()).get();
-		System.out.println(maxComparator + "--> maxComparator ");
-
-		int maxsummaryStatistics = list.stream().mapToInt(x -> x).summaryStatistics().getMax();
-		System.out.println("maxsummaryStatistics-->" + maxsummaryStatistics);
+		    double max1 = list.stream().mapToDouble(x->x).max().getAsDouble();
+		    System.out.println(max1);
+		    
+		    Integer max2 = list.stream().max(Comparator.naturalOrder()).get();
+		    System.out.println(max2);
+		    
+		    Integer max3 = list.stream().reduce(Integer::max).get();
+		    System.out.println(max3);
+		    
+		    int max4 = list.stream().mapToInt(s->s).summaryStatistics().getMax();
+		    System.out.println(max4);
 
 // Count	
 

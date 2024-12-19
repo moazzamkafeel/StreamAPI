@@ -29,10 +29,11 @@ public class Unique_Duplicate_Words {
 
 		Map<String, Long> uniqueWordsgroupingBy = list.stream()
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-		uniqueWordsgroupingBy.forEach((key, value) -> {
-			if (value == 1)
-				System.out.println(key + "" + value);
-		});
+//		uniqueWordsgroupingBy.forEach((key, value) -> {
+//			if (value == 1)
+//			{
+//	" value);
+//		});
 
 //Print Duplicate words by frequency
 
@@ -46,4 +47,3 @@ public class Unique_Duplicate_Words {
 		System.out.println(duplicateBySet);
 		
 	}
-}

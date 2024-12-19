@@ -21,8 +21,8 @@ public class Questions {
 //Q8 Given a list of numbers, square them and filter the numbers which are greater 
 	//      10000 and then find average of them.( Java 8 APIs only)
 
-//	Integer
+//Q9	Integer
 	
-//Q	Sum_Min_Max_Count_Average
+//Q10 	Sum_Min_Max_Count_Average
 
 }

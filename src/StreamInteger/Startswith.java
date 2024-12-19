@@ -9,7 +9,11 @@ public class Startswith {
 
 		List<Integer> list = List.of(21, 32, 35, 67, 77);
 
-		list.stream().map(x -> x + "").filter(x -> x.startsWith("7")).forEach(x -> System.out.println(x));
+		list.stream()
+		.map(x -> x + "")
+		.filter(x -> x.startsWith("7"))
+		.forEach(x -> System.out.println(x));
+		
 		// list.stream().map(x->x+"").filter(x->x.startsWith("2"))
 //	.forEach(x->System.out.println(x));
 

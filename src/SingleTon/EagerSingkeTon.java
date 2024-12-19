@@ -4,13 +4,12 @@ package SingleTon;
 //whose objective is to create only one instance of a class 
 //and to provide only one global access point to that object. 
 
-public class EagerSingkeTon
-{
-	
+public class EagerSingkeTon {
+
 //1st Private Static of its class object
 	private static EagerSingkeTon eagerSingkeTon = new EagerSingkeTon();
 
-	//2nd Private ons
+	// 2nd Private ons
 	private EagerSingkeTon() {
 
 	}

@@ -7,7 +7,6 @@ public class SynchroniseSingleton {
 	private SynchroniseSingleton() {
 
 	}
-
 	public static SynchroniseSingleton getInstence() {
 		synchronized (SynchroniseSingleton.class) {
 			if (synchroniseSingleton == null) {
@@ -16,7 +15,5 @@ public class SynchroniseSingleton {
 
 			return synchroniseSingleton;
 		}
-
 	}
-
 }

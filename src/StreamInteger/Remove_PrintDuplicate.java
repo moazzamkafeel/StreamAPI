@@ -12,10 +12,11 @@ public class Remove_PrintDuplicate {
 
 		// Remove Element
 		List<Integer> list = List.of(8, 3, 5, 3, 45, 64, 63, 24);
-		list.stream().distinct().forEach(x -> System.out.println(x));
+	//	list.stream().distinct().forEach(x -> System.out.println(x));
 
         //Print Duplicate
 		Set<Integer> s = new HashSet<>();
+		
 		list.stream().filter(x -> !s.add(x)).forEach(x -> System.out.println(x));
 
 		list.stream().distinct().forEach(x -> System.out.print(x));
