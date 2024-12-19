@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class SecondLargestNumber {
 
 	// Steps
-	// length-2 and reverse loop i--
+	// length-2 and reverse loop i--   scond index
 	// checking Duplicacy
 
 	// Brute Force
