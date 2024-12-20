@@ -8,10 +8,10 @@ public class SwappingNumbers {
 		int b = 20;
 		System.out.println("a----" + a + ",b----" + b);
 
-		int c = a;
+		int temp = a;
 		
 		a = b;
-		b = c;
+		b = temp;
 		System.out.println("After a----" + a + ",b----" + b);
 
 	}
