@@ -3,7 +3,9 @@ package sorting;
 public class MergeSort {
     
     // Main function that sorts an array using merge sort
+	
     public static void mergeSort(int[] array, int left, int right) {
+    	
         if (left < right) {
             // Find the middle point
             int middle = (left + right) / 2;
