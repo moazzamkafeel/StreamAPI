@@ -11,7 +11,7 @@ public class BubbleSort {
         // Traverse through all array elements
         
         for (int i = 0; i < n - 1; i++) {
-        	
+        	 
             swapped = false;
 
             // Last i elements are already in place

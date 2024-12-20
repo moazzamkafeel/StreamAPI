@@ -9,13 +9,14 @@ public class SecondLargestNumber {
 	// checking Duplicacy
 
 	// Brute Force
+	
 	public static int secondLargestNumber(int[] arr) {
 		int length = arr.length;
 
 		Arrays.sort(arr);
 		for (int i = length - 2; i >= 0; i--) {
 
-			if (arr[i] != arr[length - 1]) { // Checking Duolicacy
+			if (arr[i] != arr[length - 1]) { // Checking Duplicacy its  previous
 				return arr[i];
 			}
 		}

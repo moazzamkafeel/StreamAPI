@@ -2,8 +2,8 @@ package DSA.array;
 
 import java.util.ArrayList;
 
-public class PeakElemnet {
-//Step
+public class PeakElemnet { 
+//Step 
 	// 1. If (checking first index || Previous Number && last index || Next Number)
 
 	public static ArrayList<Integer> peak(int[] arr) {

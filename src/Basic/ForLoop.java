@@ -76,13 +76,16 @@ public class ForLoop {
 		
 		
 // inner loop loops
-		
+		 
     for (int i = 1; i <= 5; i++) { // Outer loop: Rows (numbers 1 to 5)
 		for (int j = 1; j <= 5; j++) { // Inner loop: Columns (1 to 5 times each number)
 			 System.out.println(i * j + " "); // Print the product
 			}
 			System.out.println(); // Move to the next row
 		}
+    for (int i = 0; i < 10; i += 2) {
+        System.out.println(i);
+    }
     
 	}
 }
