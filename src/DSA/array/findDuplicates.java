@@ -5,8 +5,8 @@ import java.util.List;
 
 public class findDuplicates {
 
-	@SuppressWarnings("Pending")
-	public static List<Integer> duplicate(int[] arr) {
+	@SuppressWarnings("Pending")  
+  	public static List<Integer> duplicate(int[] arr) {
 		ArrayList<Integer> res = new ArrayList<>();
 
 		for (int i = 0; i < arr.length - 1; i++) {
