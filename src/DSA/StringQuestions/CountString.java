@@ -26,20 +26,9 @@ public class CountString {
 
 	public static void main(String args[]) {
 
-		res = CountString.wordcount("manchester united");
+		res = CountString.wordcount("manchester united two");
 		// string is always passed in double quotes
 
 		System.out.println("The number of words in the String are : " + res);
-//	Map<String, Integer> ee = CountString.countJava8();
-// System.out.println(ee);
 	}
-
-	// by Java 8
-//	static String s="Moazzam Kafeel";
-//	 public static Map<String, Integer> countJava8(String input) {
-//		    return Pattern.compile("\\W+")
-//		                  .splitAsStream(input)
-//		                  .collect(Collectors.groupingBy(String::toLowerCase,
-//		                                                 Collectors.summingInt(s -> 1)));
-
 }
