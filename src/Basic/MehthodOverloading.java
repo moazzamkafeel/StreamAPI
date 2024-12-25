@@ -5,9 +5,12 @@ public class MehthodOverloading {
 	// Method Name Same
 	// Num
 
-	public int m1(int a, int b) {
+	static int plus;
+	static int plus3;
+
+	private int m1(int a, int b) {
 		return a + b;
-	}
+	}    
 
 	public static int m1(int b, int c, int a) {
 		return a + b + c;
@@ -16,13 +19,17 @@ public class MehthodOverloading {
 	public static void main(String[] args) {
 
 		MehthodOverloading m = new MehthodOverloading();
-
-		int plus = m.m1(10, 20);
-
+		plus = m.m1(10, 20);
 		System.out.println(plus);
-		int plus3 = m1(20, 678, 567);
-		System.out.println(plus3);
+		main();
 
+	}
+ 
+	public static void main() {
+
+		plus3 = m1(20, 678, 567);
+		System.out.println(plus3);
+		
 	}
 
 }

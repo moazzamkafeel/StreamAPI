@@ -1,10 +1,10 @@
 package DSA.Integer;
 
 public class PalindromeNumber {
+	
 	public static void main(String[] args) {
 		// Predefined numbers to check
 		int[] numbers = { -121, 123, 1331, 9876 };
-
 		// Loop through the numbers and check each one
 		for (int number : numbers) {
 			if (isPalindrome(number)) {

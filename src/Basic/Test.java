@@ -73,7 +73,7 @@ public class Test {
 		for (char c : text.toCharArray()) {
 			if (map.containsKey(c)) {
 				map.put(c, map.get(c) + 1);
-			} else {km              m
+			} else {
 				map.put(c, 1);
 			}
 		}
