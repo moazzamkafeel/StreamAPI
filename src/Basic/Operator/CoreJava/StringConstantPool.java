@@ -1,4 +1,4 @@
-package Basic;
+package Basic.Operator.CoreJava;
 
 public class StringConstantPool {
 	public static void main(String[] args) {

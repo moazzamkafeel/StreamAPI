@@ -1,4 +1,4 @@
-package Basic;
+package Basic.Operator.CoreJava;
 
 public class RecursiveMethod {
 

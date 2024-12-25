@@ -46,7 +46,7 @@ public class Sum_Min_Max_Count_Average {
 //MAX   
 
 		    double max1 = list.stream().mapToDouble(x->x).max().getAsDouble();
-		    System.out.println(max1);
+		    System.out.println(max1);  
 		    
 		    Integer max2 = list.stream().max(Comparator.naturalOrder()).get();
 		    System.out.println(max2);

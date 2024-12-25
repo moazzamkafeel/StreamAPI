@@ -1,4 +1,4 @@
-package Basic;
+package Basic.Operator;
 
 public class TerneryOperator {
 

@@ -14,13 +14,11 @@ public class CharacterQuestions {
 				.collect(Collectors.groupingBy(x -> x, Collectors.counting()));
 		duplicateChracter.forEach((a, b) -> {
 			if (b > 1) {
-
 				System.out.println(a + "" + b + "--->duplicateChracter");
 			}
 		});
 
 //    Non Repeated Charcters
-
 		Map<Character, Long> nonRepeatedCharater = str.chars().mapToObj(x -> (char) x)
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 		nonRepeatedCharater.forEach((k, v) -> {
