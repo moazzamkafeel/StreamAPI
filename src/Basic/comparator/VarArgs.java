@@ -1,6 +1,7 @@
-package NPTEL;
+package Basic.comparator;
 
-public class Assignment1 {
+public class VarArgs {
+
 
 	public static void main(String[] args) {
 		printNumbers(1, 2, 3); // Output: 1 2 3
@@ -9,6 +10,8 @@ public class Assignment1 {
 		printNumbers(new int[] { 5, 6 }); // Output: 5 6
 	}
 
+//	Variable Arguments (varargs)
+	
 	public static void printNumbers(int... numbers) {
 		for (int number : numbers) {
 			System.out.print(number + " ");

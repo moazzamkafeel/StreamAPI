@@ -5,6 +5,7 @@ import java.util.List;
 
 public class ImmutableClass {
     public static void main(String[] args) {
+    	
         List<String> skills = new ArrayList<>();
         skills.add("Java");
         skills.add("Spring");
