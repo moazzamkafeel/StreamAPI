@@ -1,0 +1,23 @@
+package DSA.Approches;
+
+public class Backtracking {
+	
+	public static int maxSubsetSum(int[] arr, int index, int currentSum) {
+		if (index == arr.length) {
+			return currentSum;
+		}
+
+		// Include current element
+		int include = maxSubsetSum(arr, index + 1, currentSum + arr[index]);
+
+		// Exclude current element
+		int exclude = maxSubsetSum(arr, index + 1, currentSum);
+
+		return Math.max(include, exclude);
+	}
+
+	public static void main(String[] args) {
+		int[] arr = { 3, -2, 5, 1 };
+		System.out.println("Maximum Subset Sum: " + maxSubsetSum(arr, 0, 0));
+	}
+}
