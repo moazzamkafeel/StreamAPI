@@ -1,4 +1,4 @@
-package Basic.Operator.CoreJava;
+package Basic.oops.inheritance;
 
 public class MehthodOverloading {
 

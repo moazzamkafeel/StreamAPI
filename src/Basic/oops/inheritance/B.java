@@ -7,4 +7,5 @@ public interface B extends A{
 	        System.out.println("Display from B");
 	    }
 	  
+	  
 }

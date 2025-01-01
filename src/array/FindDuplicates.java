@@ -21,7 +21,7 @@ public class FindDuplicates {
 
 			} else {
 
-				nums[index] = -nums[index];
+				nums[index] = - nums[index];
 
 			}
 
