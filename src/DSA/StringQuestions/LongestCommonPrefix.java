@@ -24,7 +24,9 @@ public class LongestCommonPrefix {
             char currentChar = prefix.charAt(i);
 
             for (int j = 1; j < strs.length; j++) {
-                if (i >= strs[j].length() || strs[j].charAt(i) != currentChar) {
+                if (i >= strs[j].length() 
+                		
+                		|| strs[j].charAt(i) != currentChar) {
                     return prefix.substring(0, i); // Return the common prefix so far
                 }
             }

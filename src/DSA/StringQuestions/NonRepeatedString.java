@@ -8,11 +8,12 @@ public class NonRepeatedString {
 	public static void main(String[] args) {
 		
 		// Method 1 toCharArray
-		String s = "moazzam";
+		String s = "mazozam";
 
-		for (char i : s.toCharArray()) {
-			if (s.indexOf(i) == s.lastIndexOf(i)) {
-				System.out.println("First non Repeated Character is--> " + i);
+		for (char ch : s.toCharArray()) {
+			
+			if (s.indexOf(ch) == s.lastIndexOf(ch)) {
+				System.out.println("First non Repeated Character is--> " + ch);
 				break;
 			}
 		}

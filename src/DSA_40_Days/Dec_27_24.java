@@ -4,7 +4,7 @@ public class Dec_27_24 {
 
 	 public boolean isPalindrome(int number) {
 		 
- 		int originalNumber = number; // Store the original number
+ 		int originalNumber = number; // Store the original numbe
 	    int reversedNumber = 0; // Variable to store the reversed number
 
 	while (number > 0) {
